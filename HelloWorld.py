@@ -51,12 +51,6 @@ if emptyList:
     print("just testing 'if emptyList'")
 
 print("")
-stringInterpolation = "String Interpolation"
-reaction = "yay!"
-print(f"{stringInterpolation}! {reaction}")
-print('syntax is print(f"{variable name}")')
-
-print("")
 print("Lesson 4")
 mod = 11%3
 print("11 % 3", mod)
@@ -101,3 +95,73 @@ print("")
 if xAndY.count(x) == 10 and xAndY.count(y) == 10:
     print("syntax notes: multiple boolean statements use and not &&")
     print(f"xAndY has {xAndY.count(x)} x's and {xAndY.count(y)} y's")
+
+print("")
+print("Lesson 5 string formatting")
+
+print("Hello %s" %"world")
+print("syntax: 'Hello %s' %var")
+
+print("")
+print("To %s multiples, use multiple percent symbols, in this case, %d times" %("use", 2))
+
+print("")
+list = [1,2,3]
+print("string representation of a list => %s" % list)
+
+print("")
+stringInterpolation = "String Interpolation"
+reaction = "yay!"
+print(f"{stringInterpolation}! {reaction}")
+print('syntax is print(f"{variable name}")')
+
+print("")
+print("Lesson 6 string operations")
+numChain = "1234566777"
+print(f"length of numChain is {len(numChain)}")
+print("syntax is len(object)")
+
+print("")
+print(f"3 is at index {numChain.index('3')} in %s" %numChain)
+print("syntax: indexOf is numChain.index('search value')")
+
+print("")
+print(f"there are {numChain.count('6')} 6's and {numChain.count('7')} 7's")
+print("syntax: to get instances of a value in a string, use .count('value')")
+
+print("")
+print(f"slice the string {numChain} from index 3 to index 6 => {numChain[3:6]}")
+print("syntax: subString, treat the string like an array, [start index:end index]")
+print("syntax: charAt, [index] => returns the character at this index => ")
+print("example numChain[3] => " + numChain[3])
+print("")
+print("syntax: substring before, [:end index] gets the substring from beginning to index")
+print("example numChain[:6] => " + numChain[:6])
+print("")
+print("syntax: substring after, [start index:] gets the substring from index to end")
+print("example numChain[3:]=> " + numChain[3:])
+print("")
+print("syntax: negative index values start at the end of the string")
+print("example numChain[-2:] retuns last two elements of a string => " + numChain[-2:])
+
+sequentialNumChain = "1234567890"
+print("get the sub string skipping every nth number => " + sequentialNumChain[2:7:2])
+print("syntax: string[<start index>:<end index>:<skip count>")
+
+print("")
+print(f"To reverse a string => "+sequentialNumChain[::-1])
+print(f"To reverse a string getting every other element=> "+sequentialNumChain[::-2])
+print("syntax/clarification: string[<NO START INDEX>:<NO END INDEX>: <skip backwards by one")
+
+print("")
+print(f"To set Hello World to upper and lower => " + "Hello World".upper() + " to lower " + "Hello World".lower())
+print("syntax to set to upper and lower case we use .upper() and .lower()")
+
+print("")
+print("check if string starts or ends with a value")
+print(f"{sequentialNumChain} starts with 123 => {sequentialNumChain.startswith('123')}")
+print(f"{sequentialNumChain} starts with 890 => {sequentialNumChain.endswith('890')}")
+
+print("")
+print("Split on space ' ' => ", sequentialNumChain.split("5"))
+print("syntax 'string.split('value') returns a list")
